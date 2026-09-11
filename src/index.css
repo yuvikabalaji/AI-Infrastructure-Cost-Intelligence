@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-bg: #0a0a0f;
+  --color-card: #141418;
+  --color-card-hover: #17171d;
+  --color-border: #2a2a35;
+  --color-border-light: #34343f;
+
+  --color-amd: #ED1C24;
+  --color-amd-bg: rgba(237, 28, 36, 0.08);
+  --color-nvidia: #76B900;
+  --color-nvidia-bg: rgba(118, 185, 0, 0.08);
+  --color-accent: #6366f1;
+  --color-accent-bg: rgba(99, 102, 241, 0.1);
+
+  --color-text: #e4e4e7;
+  --color-text-dim: #9a9aa5;
+  --color-text-faint: #6b6b76;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #45454f;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--color-border-light);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid #0a0a0f;
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid #0a0a0f;
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
